@@ -18,4 +18,10 @@ jobs:
     steps:
       - run:
           name: echo hello world
-          command: echo "hello world"
+          command: | 
+            echo "hello world
+            echo "hello world 2"
+      - run:
+          name: teste run 2
+          command: | 
+            ls -la
