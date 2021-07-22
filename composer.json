@@ -1,0 +1,10 @@
+{
+    "name": "phelipe.maglio/poc-circleci",
+    "authors": [
+        {
+            "name": "Phelipe Maglio",
+            "email": "ext.phelipe.maglio@dafiti.com.br"
+        }
+    ],
+    "require": {}
+}
