@@ -11,6 +11,9 @@ workflows:
     # Run the welcome/run job in its own container
     jobs:
       - lalalele
+      - lala: 
+          requires:
+            - lalalele    
 jobs:
   lalalele:
     docker:
@@ -26,3 +29,17 @@ jobs:
           name: teste run 2
           command: | 
             ls -la
+  lala:
+    docker:
+      - image: circleci/golang:latest
+    steps:
+      - checkout
+      - run:
+          name: echo hello world
+          command: | 
+            echo "hello world"
+            echo "hello world 2"
+      - run:
+          name: teste run 2
+          command: | 
+            ls -la          
