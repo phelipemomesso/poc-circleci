@@ -13,7 +13,11 @@ workflows:
       - lalalele
       - lala: 
           requires:
-            - lalalele    
+            - lalalele
+          filters:
+            branches:
+              only:
+                 - main       
 jobs:
   lalalele:
     docker:
