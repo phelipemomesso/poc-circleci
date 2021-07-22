@@ -11,13 +11,14 @@ workflows:
     # Run the welcome/run job in its own container
     jobs:
       - lalalele
-      - lala: 
+      - lala:
+          context: GITHUB_CONTEXT 
           requires:
             - lalalele
-          filters:
-            branches:
-              only:
-                 - main       
+          # filters:
+          #   branches:
+          #     only:
+          #        - main       
 jobs:
   lalalele:
     docker:
