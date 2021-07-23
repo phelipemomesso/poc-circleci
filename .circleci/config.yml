@@ -10,17 +10,17 @@ workflows:
   minha-poc:
     # Run the welcome/run job in its own container
     jobs:
-      - lalalele
-      - lala:
+      - teste-tdd
+      - build:
           context: GITHUB_CONTEXT 
           requires:
-            - lalalele
+            - teste-tdd
           # filters:
           #   branches:
           #     only:
           #        - main       
 jobs:
-  lalalele:
+  teste-tdd:
     docker:
       - image: circleci/golang:latest
     steps:
@@ -34,7 +34,7 @@ jobs:
           name: teste run 2
           command: | 
             ls -la
-  lala:
+  build:
     docker:
       - image: circleci/golang:latest
     steps:
